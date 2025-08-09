@@ -191,6 +191,7 @@ main {
 /* Mobile responsive */
 @media (max-width: 768px) {
     body {
+        font-family: var(--font-geist-mono), monospace; /* <<< FIXED: Added font-family here */
         font-size: 15px;
         font-weight: 500;
     }
