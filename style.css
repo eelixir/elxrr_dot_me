@@ -5,13 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
     font-family: 'Geist Mono', monospace;
     background-color: #282828;
-    color: #EADAB2;  /* Adjusted text color for readability */
+    color: #EADAB2;  
     line-height: 1.6;
     font-size: 15px;
     font-weight: 400;
@@ -38,6 +37,7 @@ body {
     padding: 1rem 2rem;
     display: flex;
     gap: 2rem;
+    justify-content: center;
 }
 
 .nav-link {
@@ -53,8 +53,8 @@ body {
 
 /* Main content */
 main {
-    width: 800px; /* Adjusted to a fixed width of 800px */
-    max-width: 100%; /* Ensures it's still responsive on smaller screens */
+    width: 800px; 
+    max-width: 100%; 
     margin: 0 auto;
     padding: 2rem;
     flex: 1;
@@ -92,45 +92,43 @@ main {
 .page-title {
     font-size: 2rem;
     font-weight: normal;
-    color: #fa4935; 
+    color: #fa4935;
 }
 
-/* Blog posts section */
-.blog-posts {
+/* Writings posts section */
+.writings-posts {
     display: flex;
     flex-direction: column;
-    gap: 2rem; /* Adjusted gap for better vertical spacing */
+    gap: 0.7rem;
 }
 
-.blog-post {
+.writing-link {
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
-    gap: 2rem; 
+    gap: 2rem;
+    color: #EADAB2;
+    text-decoration: none;
+    flex: 1;
+    padding: 10px; 
+    border-radius: 5px; 
 }
 
-.post-date {
+.writing-link:hover {
+    background-color: #383838; 
+    cursor: pointer;
+}
+
+.writing-date {
     color: #83a598;
     font-size: 14px;
-    min-width: 100px;
     flex-shrink: 0;
 }
 
-.post-title {
-    flex: 1;
-}
-
-.post-title a {
-    color: #EADAB2;
-    text-decoration: none;
+.writing-title {
+    text-align: right;
     font-size: 15px;
 }
-
-.post-title a:hover {
-    color: #8fc07d;
-    text-decoration: underline;
-}
-
-/* External links section - REMOVED */
 
 /* Sections */
 .sections-container {
@@ -144,7 +142,7 @@ main {
 }
 
 .section h2 {
-    color: #98971a;
+    color: #fbbd2e;
     font-size: 1.5rem;
     font-weight: normal;
     margin-bottom: 1rem;
@@ -175,7 +173,6 @@ main {
 
 .work-item h3 a:hover {
     color: #6e9461;
-
 }
 
 .role {
@@ -243,8 +240,6 @@ main {
     border-top: 1px solid #404040;
     max-width: 800px;
     margin: 0 auto;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .footer-links {
@@ -267,22 +262,81 @@ main {
     color: #6e9461;
 }
 
-/* Mobile responsive */
+/* Blog Post specific styles */
+.blog-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.blog-post-header {
+    margin-bottom: 2rem;
+}
+
+.blog-post-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fa4935;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post-meta {
+    color: #83a598;
+    font-size: 14px;
+}
+
+.blog-post-content {
+    line-height: 1.8;
+}
+
+.blog-post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-content h3 {
+    color: #fbbd2e;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post-content ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    list-style-type: disc;
+}
+
+.blog-post-content li {
+    margin-bottom: 0.5rem;
+}
+
+.read-time {
+    margin-left: 1rem;
+    color: #8fc07d;
+}
+
+.recent-posts-section {
+    margin-top: -4.5rem; /* or adjust to a value that achieves the desired spacing */
+}
+
+/* Mobile responsive  */
 @media (max-width: 768px) {
     body {
         font-family: 'Geist Mono', monospace;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     .nav-container {
-        padding: 0 1rem;
+        padding: 1rem 1rem;
         gap: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0; 
     }
 
     main {
-        padding: 1rem;
+        padding: 1.5rem 1rem; 
+        width: 100%; 
     }
 
     .hero {
@@ -291,92 +345,163 @@ main {
 
     .page-header {
         margin-bottom: 2rem;
-        margin-top: 0.5rem;
-
+        margin-top: 0;
     }
 
     .page-title {
-        font-size: 1.5rem;
-    }
-
-    .blog-post {
-        flex-direction: column;
-        gap: 0.3rem;
-        margin-bottom: 2rem;
-    }
-
-    .post-date {
-        min-width: auto;
+        font-size: 1.75rem;
     }
 
     .sections-container {
         flex-direction: column;
-        gap: 0rem;
+        gap: 2rem; 
     }
 
     .section {
-        margin-bottom: 2rem; 
+        margin-bottom: 1rem; 
     }
 
     .section h2 {
-        font-size: 1rem;
-        font-weight: 600;
+        font-size: 1.25rem; 
+        font-weight: 500; 
         margin-bottom: 1.5rem;
     }
 
     .intro h1 {
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-weight: 600;
     }
 
     .bio {
-        font-weight: 500;
+        font-weight: 400; 
+        max-width: 100%; 
+        margin-bottom: 2rem;
     }
 
     .work-item {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
         padding-bottom: 1rem;
-        border-bottom: 1px solid #E0E0E0;
+        border-bottom: 1px solid #404040; 
     }
 
     .work-item:last-child {
-        margin-bottom: 0rem;
-        padding-bottom: 0.5rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
         border-bottom: none;
     }
 
     .work-item h3 {
-        font-weight: 600;
+        font-weight: 500; 
     }
 
-    .header-separator {
-        border-top: 1px solid #404040;
-        max-width: 800px;
-        margin: 0 auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer-separator {
-        max-width: calc(800px - 2rem);
-        margin: 0 auto;
+    .header-separator, .footer-separator {
+        margin: 0 1rem; 
     }
 
     .footer-links {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center; 
-        gap: 1.5rem; 
         padding: 1.5rem 1rem;
+        gap: 1.5rem;
     }
 
     .footer-links a {
-        font-weight: 600;
+        font-weight: 500; 
+    }
+
+    .writings-posts {
+        gap: 1rem; 
+    }
+
+    .writing-link {
+        padding: 12px;
+        gap: 1rem;
+        flex-direction: row; 
+        align-items: center; 
+    }
+
+    .writing-date {
+        font-size: 13px;
+        white-space: nowrap;
+        min-width: 80px; 
+    }
+
+    .writing-title {
+        text-align: left; 
+        flex: 1;
+        overflow: visible;
+        text-overflow: unset;
+        white-space: normal;
+        font-size: 14px;
+    }
+
+    .blog-main {
+        padding: 1.5rem 1rem; 
+        width: 100%;
+    }
+
+    .blog-post-title {
+        font-size: 1.75rem; 
+        line-height: 1.2; 
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        hyphens: auto; 
+    }
+
+    .blog-post-meta {
+        font-size: 13px;
+        margin-bottom: 1.5rem; 
+    }
+
+    .blog-post-content {
+        line-height: 1.7; 
+    }
+
+    .blog-post-content p {
+        margin-bottom: 1.25rem;
+        text-align: left;
+    }
+
+    .blog-post-content h3 {
+        font-size: 1.3rem; 
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .blog-post-content {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .blog-post-content * {
+        max-width: 100%;
+    }
+
+    .recent-posts-section {
+        margin-top: -2rem; /* or adjust to a value that achieves the desired spacing */
     }
 }
 
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Additional mobile improvements for very small screens */
+@media (max-width: 480px) {
+    .nav-container {
+        gap: 1rem;
+        padding: 1rem 0.75rem;
+    }
+    
+    .blog-post-title {
+        font-size: 1.5rem;
+    }
+    
+    .blog-main, main {
+        padding: 1rem 0.75rem;
+    }
+    
+    .blog-post-content h3 {
+        font-size: 1.2rem;
+    }
 }
